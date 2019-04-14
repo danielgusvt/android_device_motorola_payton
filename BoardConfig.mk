@@ -26,8 +26,7 @@ TARGET_OTA_ASSERT_DEVICE := payton
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_payton_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8998
+KERNEL_PATH := kernel/motorola/msm8998 # We may not need it
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # NFC
@@ -49,6 +48,7 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 # Wifi
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 # inherit from the proprietary version
 -include vendor/motorola/payton/BoardConfigVendor.mk
-
